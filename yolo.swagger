@@ -9,7 +9,7 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "petstore.swagger.io"
+host: "yolo.radanalytics.io"
 basePath: "/v2"
 tags:
 - name: "yolo"
@@ -45,7 +45,7 @@ paths:
 securityDefinitions:
   petstore_auth:
     type: "oauth2"
-    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    authorizationUrl: "http://yolo.radanalytics.io/oauth/dialog"
     flow: "implicit"
     scopes:
       write:score: "make scoring requests"
@@ -107,4 +107,4 @@ definitions:
           - "tv/monitor"
 externalDocs:
   description: "Find out more about Swagger"
-  url: "http://swagger.io"
+  url: "http://radanalytics.io"
