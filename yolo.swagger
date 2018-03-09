@@ -1,0 +1,109 @@
+swagger: "2.0"
+info:
+  description: "This service identifies objects in supplied images"
+  version: "1.0.0"
+  title: "YOLO Image Scorer"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "willb+yolo@redhat.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "petstore.swagger.io"
+basePath: "/v2"
+tags:
+- name: "yolo"
+  description: "score an image"
+  externalDocs:
+    description: "Find out more"
+    url: "https://radanalytics.io"
+schemes:
+- "http"
+- "https"
+paths:
+  /yolo:
+    post:
+      summary: "Score an image"
+      description: ""
+      operationId: "scoreImage"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+        - in: "body"
+          name: "image"
+          schema:
+            $ref: "#/definitions/Image"
+      responses:
+        405:
+          description: "Invalid input"
+        200:
+          description:  OK
+  
+securityDefinitions:
+  petstore_auth:
+    type: "oauth2"
+    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+      write:score: "make scoring requests"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  Image:
+    type: "object"
+    required:
+    - "image"
+    properties:
+      image:
+        type: "string"
+        format: "byte"
+  Response:
+    type: "object"
+    properties:
+      results:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+  ScoredClass:
+    type: "object"
+    properties:
+      allOf:
+        $ref: "#/definitions/VOC"
+      score:
+        type: number
+  VOC:
+    type: "object"
+    properties:
+      voc:
+        type: "string"
+        enum:
+          - person
+          - bird
+          - cat
+          - cow
+          - dog
+          - horse
+          - sheep
+          - aeroplane, 
+          - bicycle
+          - boat
+          - bus
+          - car
+          - motorbike
+          - train
+          - bottle
+          - chair
+          - "dining table"
+          - "potted plant"
+          - "sofa"
+          - "tv/monitor"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
