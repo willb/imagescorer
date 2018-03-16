@@ -79,25 +79,85 @@ definitions:
         type: "string"
         enum:
           - person
+          - bicycle
+          - car
+          - motorbike
+          - aeroplane
+          - bus
+          - train
+          - truck
+          - boat
+          - traffic light
+          - fire hydrant
+          - stop sign
+          - parking meter
+          - bench
           - bird
           - cat
-          - cow
           - dog
           - horse
           - sheep
-          - aeroplane
-          - bicycle
-          - boat
-          - bus
-          - car
-          - motorbike
-          - train
+          - cow
+          - elephant
+          - bear
+          - zebra
+          - giraffe
+          - backpack
+          - umbrella
+          - handbag
+          - tie
+          - suitcase
+          - frisbee
+          - skis
+          - snowboard
+          - sports ball
+          - kite
+          - baseball bat
+          - baseball glove
+          - skateboard
+          - surfboard
+          - tennis racket
           - bottle
+          - wine glass
+          - cup
+          - fork
+          - knife
+          - spoon
+          - bowl
+          - banana
+          - apple
+          - sandwich
+          - orange
+          - broccoli
+          - carrot
+          - hot dog
+          - pizza
+          - donut
+          - cake
           - chair
-          - "dining table"
-          - "potted plant"
-          - "sofa"
-          - "tv/monitor"
+          - sofa
+          - pottedplant
+          - bed
+          - diningtable
+          - toilet
+          - tvmonitor
+          - laptop
+          - mouse
+          - remote
+          - keyboard
+          - cell phone
+          - microwave
+          - oven
+          - toaster
+          - sink
+          - refrigerator
+          - book
+          - clock
+          - vase
+          - scissors
+          - teddy bear
+          - hair drier
+          - toothbrush
 externalDocs:
   description: "Find out more about radanalytics"
   url: "http://radanalytics.io"
