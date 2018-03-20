@@ -10,6 +10,10 @@ The first score will be slower than subsequent ones.
 
 Currently there's not really any error checking.  In particular, malformed images are likely to just result in a straight-up 500 error.
 
+# credits
+
+This uses Darkflow's implementation of YOLO.
+
 # Generic swagger docs
 
 ## Overview
