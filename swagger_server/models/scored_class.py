@@ -16,7 +16,7 @@ class ScoredClass(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, voc: str=None, score: float=None):  # noqa: E501
+    def __init__(self, voc: str=None, score: float=None, tl_x: float=None, tl_y: float=None, br_y: float=None, br_x: float=None):  # noqa: E501
         """ScoredClass - a model defined in Swagger
 
         :param voc: The voc of this ScoredClass.  # noqa: E501
@@ -26,16 +26,28 @@ class ScoredClass(Model):
         """
         self.swagger_types = {
             'voc': str,
-            'score': float
+            'score': float,
+            'tl_x': float,
+            'tl_y': float,
+            'br_y': float,
+            'br_x': float
         }
 
         self.attribute_map = {
             'voc': 'voc',
-            'score': 'score'
+            'score': 'score',
+            'tl_x': 'tl_x',
+            'tl_y': 'tl_y',
+            'br_y': 'br_y',
+            'br_x': 'br_x'
         }
 
         self._voc = voc
         self._score = score
+        self._tl_x = tl_x
+        self._tl_y = tl_y
+        self._br_y = br_y
+        self._br_x = br_x
 
     @classmethod
     def from_dict(cls, dikt) -> 'ScoredClass':
@@ -75,6 +87,22 @@ class ScoredClass(Model):
 
         self._voc = voc
 
+    @property
+    def tl_x(self) -> float:
+        return self._tl_x
+    
+    @property
+    def tl_y(self) -> float:
+        return self._tl_y
+    
+    @property
+    def br_x(self) -> float:
+        return self._br_x
+    
+    @property
+    def br_y(self) -> float:
+        return self._br_y
+     
     @property
     def score(self) -> float:
         """Gets the score of this ScoredClass.
