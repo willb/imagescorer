@@ -76,6 +76,14 @@ definitions:
     - properties:
         score:
           type: "number"
+        tl_x:
+          type: "number"
+        tl_y:
+          type: "number"
+        br_x:
+          type: "number"
+        br_y:
+          type: "number"
   VOC:
     type: "object"
     properties:

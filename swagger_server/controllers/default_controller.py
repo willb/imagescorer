@@ -30,7 +30,7 @@ def score_image(image=None):  # noqa: E501
         
     imgcv = cv2.imdecode(numpy.asarray(bytearray(image), dtype=numpy.uint8), cv2.IMREAD_COLOR)
     result = tfnet().return_predict(imgcv)
-    print(repr(result))
-    scores = [ScoredClass(voc=r['label'], score=float(r['confidence'])) for r in result]
+    # print(repr(result))
+    scores = [ScoredClass(voc=r['label'], score=float(r['confidence']), tl_x=float(r['topleft']['x']), tl_y=float(r['topleft']['y']), br_x=float(r['bottomright']['x']), br_y=float(r['bottomright']['y'])) for r in result]
     
     return scores
